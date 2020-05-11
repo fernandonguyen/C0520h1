@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demobai</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+<form action="demo.html">
+    <fieldset>
+        <legend>Dang ky</legend>
+        <label for="firstname">First Name: </label>
+        <input type="text" name="firstname" id="firstname" value="" placeholder="Your first name">
+        <br>
+        <label for="lastname">Last Name: </label>
+        <input type="text" name="lastname" id="lastname" value="" placeholder="Your last name">
+        <br>
+        <label>Country: </label>
+        <select id="country" name="country">
+            <option value="VN">VIET NAM</option>
+            <option value="LAO">LAO</option>
+            <option value="MY">MY</option>
+        </select>
+        <br>
+        <label>Subject</label>
+        <textarea id="subject" name="subject" placeholder="Input Subject"></textarea>
+        <br>
+        <button type="button" onclick="test()">Submit</button>
+    </fieldset>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Codegym</td>
+                <td>HANOI</td>
+                <td>VIETNAM</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td colspan="3">Thong tin dang ky</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<script>
+    function test() {
+        alert("demobai1")
+    }
+</script>
+</body>
+</html>
