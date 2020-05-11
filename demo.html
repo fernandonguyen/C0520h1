@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        input[type=text], textarea, select {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            resize: vertical;
+            border-radius: 4px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin-right: 6%;
+            margin-top: 10px ;
+        }
+
+        input[type=submit]:hover{
+            background-color: #45a049;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .row:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        label {
+            padding: 12px 12px 12px 12px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="#" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="firstname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="firstname" id="firstname" placeholder="Your First Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lastname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="lastname" id="lastname" placeholder="Your Last Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+                <select id="country" name="country">
+                    <option value="vn">Viet Name</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something" style="height: 200px"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
