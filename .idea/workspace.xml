@@ -72,9 +72,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="23" width="816" height="698" key="CommitChangelistDialog2" timestamp="1589165855703">
-      <screen x="0" y="0" width="1024" height="768" />
+    <state x="146" y="27" width="816" height="698" key="CommitChangelistDialog2" timestamp="1589169887209">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="104" y="23" width="816" height="698" key="CommitChangelistDialog2/0.0.1024.768@0.0.1024.768" timestamp="1589165855703" />
+    <state x="146" y="27" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1589169887209" />
   </component>
 </project>
