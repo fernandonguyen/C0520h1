@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="test">codegym </p>
+<p>VN :</p><input id="vietname" type="text" value=""><br>
+<p>DO :</p><input id="do" type="text" value=""><br>
+<button type="button" onclick="chuyendoi()">Chuyen doi</button>
+<script>
+
+   // let m = document.getElementById("vietname");
+
+    function chuyendoi() {
+      let vn = Number(document.getElementById("vietname").value);
+      let usd = Number(document.getElementById("do").value);
+      let dola = vn/23000;
+      document.getElementById("do").value = dola;
+      let dong = usd*23000;
+      document.getElementById("vietname").value = dong;
+    }
+
+    // let a = Number(prompt("Nhap so a"));
+    // let b = Number(prompt("Nhap so b"));
+    //
+    // console.log(a+b);
+    // ///document.getElementById(a+b);
+    // if(a === 0){
+    //     if(b === 0){
+    //         document.getElementById("test").innerHTML = "Vo so nghiem";
+    //     } else {;
+    //         document.getElementById("test").innerHTML = "Vo nghiem";
+    //     }
+    // } else {
+    //     document.getElementById("test").innerHTML = -b/a;
+    //}
+
+    // let n = 2;
+    // let count = 0;
+    // let songuyento = true;
+    //
+    // while (count <20) {
+    //     songuyento = true;
+    //     for(let i = 2 ; i <= n/2 ; i++){
+    //         if(n%i === 0){
+    //             songuyento = false;
+    //             break;
+    //         }
+    //     }
+    //
+    //     if(songuyento){
+    //         document.write(n + "<br>");
+    //         count++;
+    //     }
+    //     n++;
+    // }
+
+   // n++;
+
+</script>
+</body>
+</html>
