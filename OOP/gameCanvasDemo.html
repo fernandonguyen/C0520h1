@@ -8,8 +8,6 @@
 <canvas id="canvas" width="480" height="270" style="border: 1px solid #000000"></canvas>
 </body>
 <script>
-    let checkY = true;
-    let checkX = true;
     //ve man hinh
     let myGameArea = {
         canvas: document.getElementById("canvas"),
@@ -32,21 +30,27 @@
     }
     
     let birdGame;
-    let bug;
+    let bugList;
 
     // ham de chay
     function startGame() {
         birdGame = new component(30, 30, "red", 10, 120);
-        bug = new component(20, 20, "green", 200, 120);
-        //bugList = new Array(100);
-       // bugList.push(bug)
+
+        bugList = new Array(10);
+        for(let i = 0; i < 10; i++){
+            let x = Math.floor(Math.random() * 200 + 100);
+            let y = Math.floor(Math.random() * 200 + 100);
+            let bug = new component(20, 20, "green", x, y);
+            bugList[i] = bug;
+        }
         //khoi tao man hinh canvas
         myGameArea.start();
         // ve cac doi tuong trong canvas
         birdGame.draw();
-        bug.draw();
-
-
+        for(let i = 0; i < 2; i++){
+           //console.log(bugList[i]);
+            bugList[i].draw();
+        }
     }
 
     // khai bao lop de tao cac doi tuong nguoi choi
@@ -56,6 +60,8 @@
         this.color = color;
         this.speedX = 0;
         this.speedY = 0;
+        this.checkX = true;
+        this.checkY = true;
         this.x = x;
         this.y = y;
         // ham ve can vas
@@ -76,37 +82,45 @@
         myGameArea.clear();
         birdGame.speedX = 0;
         birdGame.speedY = 0;
-        bug.speedX = 0;
-        bug.speedY = 0;
+       // bug.speedX = 0;
+        //bug.speedY = 0;
         //di chuyen, thay doi toa do bang cach cong them 1 bien di chuyen
        // bug.speedX = Math.floor(Math.random() * 10 + 1);
        // bug.speedY = Math.floor(Math.random() * 10 + 1);
-        if(bug.x + bug.speedX > 470){
-            checkX = false;
-        }
+        for(let i = 0; i < 10; i++) {
+            let bug =  bugList[i];
+            bug.speedX = Math.floor(Math.random() * 2 + 1);
+            bug.speedY = Math.floor(Math.random() * 2 + 1);
+            if (bug.x + bug.speedX > 470) {
+                bug.checkX = false;
+            }
 
-        if(bug.x + bug.speedX < 0){
-            checkX = true;
-        }
+            if (bug.x + bug.speedX < 0) {
+                bug.checkX = true;
+            }
 
-        if(!checkX){
-            bug.speedX = - 1
-        }else{
-            bug.speedX = 1
-        }
+            if(!bug.checkX){
+                bug.speedX = -Math.floor(Math.random() * 2 + 1);
+            }else{
+                bug.speedX = Math.floor(Math.random() * 2 + 1);
+            }
 
-        if(bug.y + bug.speedY > 260){
-            checkY = false;
-        }
+            if (bug.y + bug.speedY > 260) {
+                bug.checkY = false;
+            }
 
-        if(bug.y + bug.speedY < 0){
-            checkY = true;
-        }
+            if (bug.y + bug.speedY < 0) {
+                bug.checkY = true;
+            }
 
-        if(!checkY){
-            bug.speedY = - 1;
-        }else{
-            bug.speedY = 1;
+            if(!bug.checkY){
+                bug.speedY = -Math.floor(Math.random() * 2 + 1);
+            }else{
+                bug.speedY = Math.floor(Math.random() * 2 + 1);
+            }
+
+            bug.newPos();
+            bug.draw();
         }
 
         // addListener
@@ -123,11 +137,10 @@
         if (myGameArea.keys && myGameArea.keys[40]) {
             birdGame.speedY = 1;
         }
-        bug.newPos();
-        bug.draw();
+       // bug.newPos();
+        //bug.draw();
         birdGame.newPos();
         birdGame.draw();
-        //myGameArea.start();
     }
     //goi ham chay
     startGame();
