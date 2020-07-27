@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<h1>CSS Position Types Demo</h1>
+<div id="parent-container">
+    I am the ancestor of all the boxes inside me. Also, I am positioned <span>relatively.</span> What is affected if I were <span>static</span>?
+    <div id="static"><span>static</span> positioning means that this element is <i>unpositioned</i>. It is rendered where the element is by default according to the HTML. It's not participating in all the positioning fun.
+
+        <div class="absolute">
+            this <span>absolutely-positioned</span> element has <i>escaped</i> its <span>static</span> parent element.</br>It is now positioned relative to its nearest <span>relative</span> ancestor.
+        </div>
+
+    </div>
+
+    <div id="relative"><span>relative</span> positioning means the element is positioned relative to itself. Without using the <span>top</span>, <span>right</span>, <span>bottom</span>, or <span>left</span> properties, it behaves like a <span>static</span> element. Try adding
+        properties to move this element!
+
+        <div class="absolute"><span>absolute</span> means positioned relative to its nearest <i>positioned</i> parent positioned element. Uncomment the following HTML!
+            <!--      The absolutely-positioned element is taken out of the regular DOM flow.-->
+
+            <!-- <br>
+              When an element is positioned absolutely, it is taken out of the normal flow and the other elements fill in its gap.  This allows it to have a <span>z-index</span> property, and means that it can <i>overlay</i> over other elements. <br> Basically, absolute elements are on a different layer. I've illustrated this by giving the absolute elements a box-shadow - like they're 'above' the other elements! Try deleting the <span>background-color</span> property of this element!-->
+
+        </div>
+
+    </div>
+
+    <div id="fixed">
+        <span>fixed</span> positioning means that I am positioned relative to the browser window a.k.a the viewport. Even if you scroll, I'll be right here. PS - extra info in the HTML!
+
+        <!--    Using a CSS3 transform property on me results in my position becoming relative to a parent ancestor instead. Check the comments for this pen for more info. Thanks to @ericnkatz for the heads-up!-->
+    </div>
+
+</div>
+</body>
+</html>
